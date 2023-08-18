@@ -9,17 +9,27 @@ import Single from './pages/Single';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+const Layout = () => {
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
+  );
+};
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    Children: [
+    children: [
       {
         path: "/",
         element: <Home />
       },
       {
-        path: "/single",
+        path: "/post/:id",
         element: <Single />
       },
       {
@@ -37,8 +47,6 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
-
-
 ]);
 
 function App() {
@@ -49,14 +57,6 @@ function App() {
   );
 }
 
-const Layout = () => {
-  return (
-    <>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </>
-  );
-};
+
 
 export default App;
