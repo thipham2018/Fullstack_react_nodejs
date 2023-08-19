@@ -1,5 +1,4 @@
 import React from 'react'
-import "../style.scss"
 import { Link } from 'react-router-dom';
 
 const Register = () => {
@@ -12,7 +11,7 @@ const Register = () => {
         <input required type="password" placeholder='password' />
         <button>Register</button>
         <p>This is an error!</p>
-        <span>Don't have an account?<Link to="/Login">Login</Link>
+        <span>Don't have an account?<Link to="/login">Login</Link>
         </span>
       </form>
     </div>
