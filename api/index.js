@@ -4,18 +4,18 @@ import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import cors from "cors"
 
-
+// const cors = require("cors");
 const app = express();
-
+app.use(cors());
 
 app.use(express.json());
-
-app.use(cors());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 
 app.listen(8800, () => {
-  console.log("Connected!");
+
+  console.log("server Connected!");
+
 });
